@@ -318,9 +318,13 @@ function installAudioUnlock() {
 // Two pre-decoded samples (press / release) — pick one at random on each
 // hover for variety. Fetched + decoded once on first play; subsequent hovers
 // just spawn a fresh BufferSource (cheap, can overlap).
+const BASE_PATH =
+  process.env.NEXT_PUBLIC_BASE_PATH ??
+  (process.env.NODE_ENV === "production" ? "/Ramim-Portfolio-3d" : "");
+
 const KEY_SOUND_URLS = [
-  "/sounds/switch_press.mp3",
-  "/sounds/switch_release.mp3",
+  `${BASE_PATH}/sounds/switch_press.mp3`,
+  `${BASE_PATH}/sounds/switch_release.mp3`,
 ] as const;
 const keySoundBuffers: (AudioBuffer | null)[] = [null, null];
 let keySoundsLoading: Promise<void> | null = null;
@@ -774,7 +778,7 @@ function Keyboard({ mobile }: { mobile: boolean }) {
                 letter stays fixed regardless of how long the title is. */}
             <Text3D
               key={hoveredIcon.slug}
-              font="/fonts/space_grotesk_bold.typeface.json"
+              font={`${BASE_PATH}/fonts/space_grotesk_bold.typeface.json`}
               size={0.25}
               height={0.1}
               curveSegments={12}
