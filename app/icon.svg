@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Ramim Ahmed</title>
+  <defs>
+    <linearGradient id="accent" x2="1" y2="1">
+      <stop stop-color="#b6e3ff"/>
+      <stop offset="1" stop-color="#4ba8f5"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#060e1c"/>
+  <rect x="3" y="3" width="58" height="58" rx="13" fill="none" stroke="#27517b"/>
+  <g fill="none" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 44V20h8a6 6 0 010 12h-8m8 0 7 12"/>
+    <path d="m33 44 8-24 9 24m-14-8h11"/>
+  </g>
+</svg>
